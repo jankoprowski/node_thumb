@@ -1,0 +1,30 @@
+div#node-thumb-gallery > div.form-item > div.description {
+  clear: both;
+}
+
+div#node-thumb-gallery > div.form-item > div.form-radios > div.form-item {
+  float: left;
+  padding: 5px 5px 5px 5px;
+}
+
+div#node-thumb-gallery > div.form-item > div.form-checkboxes > div.form-item {
+  float: left;
+  padding: 5px 5px 5px 5px;
+}
+
+div#node-thumb-gallery label.option {
+  text-align: center;
+  vertical-align: middle;  
+}
+
+div#node-thumb-gallery label.option > input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3px;
+}
+
+
+div#node-thumb-gallery label.option > img {
+  display: inline;
+}

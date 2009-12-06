@@ -1,0 +1,41 @@
+<?php
+function node_thumb_schema() {
+  $schema['node_thumbs'] = array(
+    'description' => 'Images related with nodes',
+    'fields' => array(
+      'nid' => array(
+        'description' => 'Node identificator.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0),
+      'image' => array(
+        'description' => 'Image name.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE)
+    ),
+    'indexes' => array(
+      'node_id' => array('nid')
+    ),
+    'unique keys' => array(
+      'nid' => array('nid')
+    ),
+    'primary key' => array('nid')
+  );
+  return $schema;
+}
+
+function node_thumb_install() {
+  variable_set('node_thumbs_directory', '');
+  variable_set('node_thumbs_promoted', array());
+  variable_set('node_thumbs_nodes', array());
+  drupal_install_schema('node_thumb');
+}
+
+function node_thumb_uninstall() {
+  variable_del('node_thumbs_directory');
+  variable_del('node_thumbs_promoted');
+  variable_del('node_thumbs_nodes');
+  drupal_uninstall_schema('node_thumb');
+}
+?>

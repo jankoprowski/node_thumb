@@ -1,0 +1,5 @@
+name =  Node Thumbnail
+description = "Allow chose image for node from shared directory"
+core = 6.x
+package = Views
+dependencies[] = node
